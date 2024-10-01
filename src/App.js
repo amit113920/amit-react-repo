@@ -9,7 +9,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://localhost:444/test/testDetail"
+          href="http://localhost:444/test/testDetail"
           target="_blank"
           rel="noopener noreferrer"
         >
