@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import apicall, { fetchData } from "../services/apicall";
+import  { fetchData } from "../services/apicall";
 
 
 
