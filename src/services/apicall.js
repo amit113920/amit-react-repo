@@ -10,7 +10,7 @@ export const fetchData = async (props) => {
     
     
     //try {
-        const response = await apiClient.get(props.url)
+         apiClient.get(props.url)
         .then((resp)=>{alert(resp.data)})
         .catch((err)=>{alert(err.headers)});
         
