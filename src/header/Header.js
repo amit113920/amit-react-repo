@@ -1,13 +1,11 @@
+import { Link } from "react-router-dom";
 import apicall, { fetchData } from "../services/apicall";
 
 
 
 function Header(){
 
-  const call=()=>{
-    const val=fetchData();
-   // alert(val);
-  };
+  
 return (
 
 <nav class="navbar navbar-default">
@@ -16,8 +14,9 @@ return (
       <a class="navbar-brand" href="#">WebSiteName</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><button onClick={call} >Home</button></li>
-      <li><a href="/exam">Page 1</a></li>
+      <li class="active"><Link onClick={()=>fetchData({url:'test/getDetail'})} >Detail</Link></li>
+      <li class="active"><Link onClick={()=>fetchData({url:'test/getInfo'})} >Info</Link></li>
+     
       <li><a href="#">Page 2</a></li>
       <li><a href="#">Page 3</a></li>
     </ul>

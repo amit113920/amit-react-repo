@@ -1,21 +1,24 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-    baseURL: 'http://localhost:444',
+    baseURL: 'http://localhost:8081',
     timeout: 1000,
-    headers: {'host': 'localhost:444'}
+    headers: {'Host': 'localhost:8081'}
 });
 
-export const fetchData = async () => {
-    alert('api start');
-    try {
-        const response = await apiClient.get('/login');
-        alert('api call end');
+export const fetchData = async (props) => {
+    
+    
+    //try {
+        const response = await apiClient.get(props.url)
+        .then((resp)=>{alert(resp.data)})
+        .catch((err)=>{alert(err.headers)});
+        
         //return response.data;
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        throw error;
-    }
+    //} catch (error) {
+        //console.error('Error fetching data:', error);
+       // throw error;
+    //}
 };
     export const fetchPost=async()=>{
 
