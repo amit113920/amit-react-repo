@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import  { fetchData } from "../services/apicall";
+import  { fetchData, loginFetch } from "../services/apicall";
 
 
 
@@ -14,8 +14,9 @@ return (
       
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><Link onClick={()=>fetchData({url:'test/getDetail'})} >Detail</Link></li>
-      <li class="active"><Link onClick={()=>fetchData({url:'test/getInfo'})} >Info</Link></li>
+      <li class="active"><Link onClick={()=>fetchData({url:'/test/getDetail'})} >Detail</Link></li>
+      <li class="active"><Link onClick={()=>fetchData({url:'/test/getInfo'})} >Info</Link></li>
+      <li class="active"><Link onClick={()=>loginFetch({url:'/login'})} >Login</Link></li>
      
       
     </ul>
