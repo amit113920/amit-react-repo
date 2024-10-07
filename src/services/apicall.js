@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { clearCacheData } from './clear_catche';
+
 
 
 
